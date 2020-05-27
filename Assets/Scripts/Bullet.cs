@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
                 other.material = material;
                 break;
             case "Enemy":
-                other.gameObject.GetComponent<Enemy>().attacked();
+                //other.gameObject.GetComponent<Enemy>().attacked();
                 break;
             case "Player":
                 other.GetComponent<Player>().attacked();
