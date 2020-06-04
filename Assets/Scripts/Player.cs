@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public GameObject Bullet;
     public GameObject TankEmitter;
+    public GameObject TankBody;
 
     int anglenow = 0;
     int top_anglenow = 0;
@@ -56,7 +57,22 @@ public class Player : MonoBehaviour
 
     void move()
     {
-        
+        if (Input.GetKey(KeyCode.W))
+        {
+            TankBody.transform.Translate(TankBody.transform.forward * Time.deltaTime * 5, Space.World);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            TankBody.transform.Translate(TankBody.transform.forward * Time.deltaTime * -5, Space.World);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            TankBody.transform.Rotate(new Vector3(0, -1, 0), 1);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            TankBody.transform.Rotate(new Vector3(0, 1, 0), 1);
+        }
     }
 
     void fire()
