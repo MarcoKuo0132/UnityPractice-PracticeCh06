@@ -264,6 +264,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 465357784}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &465357786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 0d109155898ca9e47aa97ce6ed45bd8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 465357784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &481212687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400050, guid: 12581cac3a066a54e807e8cb83dcd794,
@@ -343,7 +349,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1e-45, y: 0, z: 0, w: -6.9793364e-22}
+  m_BoundingSphereOverride: {x: 6.98e-43, y: -2.5083432e-29, z: 6.98e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -380,10 +386,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1110037830}
     m_Modifications:
-    - target: {fileID: 100050, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}
-      propertyPath: m_Name
-      value: tank_buttom
-      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3675843
@@ -439,6 +441,10 @@ PrefabInstance:
     - target: {fileID: 400050, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}
+      propertyPath: m_Name
+      value: tank_buttom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}
@@ -617,9 +623,10 @@ GameObject:
   - component: {fileID: 1110037830}
   - component: {fileID: 1110037829}
   - component: {fileID: 1110037828}
+  - component: {fileID: 1110037831}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -669,6 +676,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 179.681, z: 0}
+--- !u!114 &1110037831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110037827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daba996b1d3c11d48af8321581c35017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 1701349779}
+  emitter: {fileID: 465357786}
 --- !u!1 &1701349779
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +702,7 @@ GameObject:
   - component: {fileID: 1701349782}
   - component: {fileID: 1701349781}
   - component: {fileID: 1701349780}
+  - component: {fileID: 1701349784}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -761,6 +783,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1701349784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701349779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22951ba170a1c1c4a92d0e1336c1d3a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 100000, guid: 0c4f9ded8df71be49a6d8f5ca6d86b22, type: 3}
+  sExplosion: {fileID: 0}
+  material: {fileID: 0}
 --- !u!1001 &1812259003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -768,10 +805,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2020999299}
     m_Modifications:
-    - target: {fileID: 100050, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}
-      propertyPath: m_Name
-      value: tank_buttom
-      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3675843
@@ -827,6 +860,10 @@ PrefabInstance:
     - target: {fileID: 400050, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}
+      propertyPath: m_Name
+      value: tank_buttom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12581cac3a066a54e807e8cb83dcd794, type: 3}

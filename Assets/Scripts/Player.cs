@@ -73,6 +73,6 @@ public class Player : MonoBehaviour
 
     public void attacked()
     {
-        
+        print(this.name + " hitted ");
     }
 }

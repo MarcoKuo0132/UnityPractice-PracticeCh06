@@ -16,10 +16,10 @@ public class Bullet : MonoBehaviour
         switch (other.tag)
         {
             case "Barrel":
-                other.material = material;
+                //other.material = material;
                 break;
             case "Enemy":
-                //other.gameObject.GetComponent<Enemy>().attacked();
+                other.gameObject.GetComponent<Enemy>().attacked();
                 break;
             case "Player":
                 other.GetComponent<Player>().attacked();
